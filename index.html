@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>icon for begniner</title>
+    <style>
+        :root{
+            --facebook : rgb(0, 70, 175);
+            --twitter  :  rgb(0, 183, 255);
+            --youtube  :  rgb(245, 8, 8);
+        }
+        main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .box{
+            display: flex;
+        }
+        .item{
+            margin: 4px;
+            position: relative;
+    
+        }
+       .item i{
+            padding: 30px;
+            font-size: 25px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            position: relative;
+        }
+        .item:hover i{
+            color: #fff;
+            cursor: pointer;
+        }
+        .item::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 5%;
+            bottom: 0;
+            background-color:var(--facebook);
+            transition: .5s ;
+        }
+        .item:hover::before ,item:hover{
+            height: 100%;
+            color: #fff;
+        }
+        .twitter::before{
+            background-color:var(--twitter);
+        }
+        .youtube::before{
+            background-color:var(--youtube);
+        }
+
+        .fa-facebook{
+          color: var(--facebook);
+        }
+        .fa-twitter{
+            color: var(--twitter);
+        }
+        .fa-youtube{
+            color: var(--youtube);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box">
+            <div class="facebook item">
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="twitter item">
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="youtube item">
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
